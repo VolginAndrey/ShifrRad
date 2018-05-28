@@ -162,21 +162,21 @@ namespace ib_lab
                         tail[i - enc_part_l] = tmp_str_input_text[i];
 
                 //основной алгоритм
-                //if (tmp_str_input_text.Length != block_size + 1)
-                //{
-                //    MessageBox.Show("Неверный ключ", "Ошибка", MessageBoxButtons.OK);
-                //    string[] answer = new string[1];
-                //    answer[0] = "";
-                //    return answer;
-                //}
+                if (tmp_str_input_text.Length != block_size + 1)
+                {
+                    MessageBox.Show("Неверный ключ", "Ошибка", MessageBoxButtons.OK);
+                    string[] answer = new string[1];
+                    answer[0] = "";
+                    return answer;
+                }
 
-                //if (str_input_text.Last() == ' ')
-                //{
-                //    MessageBox.Show("Неверный ключ", "Ошибка", MessageBoxButtons.OK);
-                //    string[] answer = new string[1];
-                //    answer[0] = "";
-                //    return answer;
-                //}
+                if (str_input_text.Last() == ' ')
+                {
+                    MessageBox.Show("Неверный ключ", "Ошибка", MessageBoxButtons.OK);
+                    string[] answer = new string[1];
+                    answer[0] = "";
+                    return answer;
+                }
 
                 for (var t = 0; t < block_order.Length; t++)
                 {
